@@ -2,8 +2,8 @@
 
 namespace MaxKostinevich\ArtisanPing\Tests;
 
-use Orchestra\Testbench\TestCase as Orchestra;
 use MaxKostinevich\ArtisanPing\ArtisanPingServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {

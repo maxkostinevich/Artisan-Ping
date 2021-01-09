@@ -9,7 +9,7 @@ class BasicTest extends TestCase
     {
         $this->artisan('ping:http', [
             '--url' => 'https://example.com',
-            '--method' => 'get'
+            '--method' => 'get',
         ])
             ->expectsOutput('Request completed successfully (Code: 200)')
             ->assertExitCode(0);

@@ -3,8 +3,8 @@
 namespace MaxKostinevich\ArtisanPing\Commands;
 
 use Exception;
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Http;
 
 class ArtisanPingCommand extends Command
@@ -30,7 +30,6 @@ class ArtisanPingCommand extends Command
         $data = $this->option('data');
 
         if ($this->option('queue')) {
-
             $this->info('Command called and pushed to queue');
             Artisan::queue('ping:http', [
                 '--url' => $url,
@@ -38,8 +37,9 @@ class ArtisanPingCommand extends Command
                 '--retry' => $retry,
                 '--timeout' => $timeout,
                 '--headers' => $headers,
-                '--data' => $data
+                '--data' => $data,
             ]);
+
             return true;
         }
 
@@ -53,6 +53,7 @@ class ArtisanPingCommand extends Command
             $tmp = explode('=', $key);
             $header[$tmp[0]] = $tmp[1];
         }
+
         try {
             $this->comment('Making a ' . $method . ' request to ' . $url);
             $response = Http::retry($retry, 5)->timeout($timeout)->withHeaders($header)->{$method}($url, $body)->throw()->status();
