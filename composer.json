@@ -1,0 +1,57 @@
+{
+    "name": "maxkostinevich/artisan-ping",
+    "description": "Make HTTP requests using Laravel Artisan.",
+    "keywords": [
+        "maxkostinevich",
+        "artisan-ping"
+    ],
+    "homepage": "https://github.com/maxkostinevich/artisan-ping",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Max Kostinevich",
+            "email": "hello@maxkostinevich.com",
+            "homepage": "https://maxkostinevich.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "illuminate/contracts": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "MaxKostinevich\\ArtisanPing\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MaxKostinevich\\ArtisanPing\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm",
+        "test": "vendor/bin/phpunit --colors=always",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MaxKostinevich\\ArtisanPing\\ArtisanPingServiceProvider"
+            ],
+            "aliases": {
+                "ArtisanPing": "MaxKostinevich\\ArtisanPing\\ArtisanPingFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
