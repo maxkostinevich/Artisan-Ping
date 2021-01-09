@@ -1,7 +1,7 @@
 # Artisan Ping
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/maxkostinevich/artisan-ping.svg?style=flat-square)](https://packagist.org/packages/maxkostinevich/artisan-ping)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/maxkostinevich/artisan-ping/run-tests?label=tests)](https://github.com/maxkostinevich/artisan-ping/actions?query=workflow%3ATests+branch%3Amaster)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/maxkostinevich/artisan-ping/run-tests?label=tests)](https://github.com/maxkostinevich/artisan-ping/actions?query=workflow%3ATests+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/maxkostinevich/artisan-ping.svg?style=flat-square)](https://packagist.org/packages/maxkostinevich/artisan-ping)
 
 ---
